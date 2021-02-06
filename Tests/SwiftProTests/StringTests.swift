@@ -9,6 +9,7 @@ final class StringTests: XCTestCase {
         ("testIsBlankIfPresent", testIsBlankIfPresent)
     ]
     
+    /// Equivalent to isEmpty
     func testIsBlankIfEmpty() {
         let string = ""
         XCTAssertTrue(string.isBlank)
