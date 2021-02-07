@@ -1,11 +1,11 @@
 import SwiftUI
 
 @available(iOS 14, *)
-struct TextArea: View {
+public struct TextArea: View {
     private let placeholder: String
-    @Binding var text: String
+    public @Binding var text: String
     
-    init(_ placeholder: String, text: Binding<String>) {
+    public init(_ placeholder: String, text: Binding<String>) {
         self.placeholder = placeholder
         self._text = text
     }
