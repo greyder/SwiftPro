@@ -1,3 +1,5 @@
+import SwiftUI
+
 struct TextArea: View {
     private let placeholder: String
     @Binding var text: String
