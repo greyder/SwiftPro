@@ -1,5 +1,6 @@
 import SwiftUI
 
+@available(iOS 14, *)
 struct TextArea: View {
     private let placeholder: String
     @Binding var text: String
