@@ -3,14 +3,14 @@ import SwiftUI
 @available(iOS 14, *)
 public struct TextArea: View {
     private let placeholder: String
-    public @Binding var text: String
+    @Binding public var text: String
     
     public init(_ placeholder: String, text: Binding<String>) {
         self.placeholder = placeholder
         self._text = text
     }
     
-    var body: some View {
+    public var body: some View {
         TextEditor(text: $text)
             .background(
                 HStack(alignment: .top) {
