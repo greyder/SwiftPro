@@ -2,10 +2,13 @@ import SwiftUI
 
 @available(iOS 13, *)
 public struct BlurView: UIViewRepresentable {
-    public typealias UIViewType = UIView
     public let style: UIBlurEffect.Style
+    
+    public init(_ style: UIBlurEffect.Style = .regular) {
+        self.style = style
+    }
 
-    public func makeUIView(context: UIViewRepresentableContext<BlurView>) -> UIView {
+    public func makeUIView(context: Context) -> UIView {
         let view = UIView(frame: CGRect.zero)
         view.backgroundColor = .clear
 
@@ -22,6 +25,6 @@ public struct BlurView: UIViewRepresentable {
         return view
     }
 
-    public func updateUIView(_ uiView: UIView, context: UIViewRepresentableContext<BlurView>) {
+    public func updateUIView(_ uiView: UIView, context: Context) {
     }
 }

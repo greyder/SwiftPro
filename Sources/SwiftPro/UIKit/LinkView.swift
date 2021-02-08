@@ -4,6 +4,10 @@ import LinkPresentation
 @available(iOS 13, *)
 public struct LinkView: UIViewRepresentable {
     public let url: URL
+    
+    public init(_ url: URL) {
+        self.url = url
+    }
 
     public func makeUIView(context: Context) -> LPLinkView {
         return LPLinkView(url: url)
