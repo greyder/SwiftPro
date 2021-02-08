@@ -3,7 +3,7 @@ import SwiftUI
 @available(iOS 13, *)
 public struct BlurView: UIViewRepresentable {
     public typealias UIViewType = UIView
-    public var style: UIBlurEffect.Style
+    public let style: UIBlurEffect.Style
 
     public func makeUIView(context: UIViewRepresentableContext<BlurView>) -> UIView {
         let view = UIView(frame: CGRect.zero)
