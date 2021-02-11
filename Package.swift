@@ -10,6 +10,18 @@ let package = Package(
         .library(
             name: "SwiftPro",
             targets: ["SwiftPro"]),
+        .library(
+            name: "BlurView",
+            targets: ["BlurView"]),
+        .library(
+            name: "LinkView",
+            targets: ["LinkView"]),
+        .library(
+            name: "WebView",
+            targets: ["WebView"]),
+        .library(
+            name: "TextArea",
+            targets: ["TextArea"]),
     ],
     dependencies: [
         // Dependencies declare other packages that this package depends on.
@@ -21,8 +33,20 @@ let package = Package(
         .target(
             name: "SwiftPro",
             dependencies: []),
+        .target(
+            name: "BlurView",
+            dependencies: []),
+        .target(
+            name: "LinkView",
+            dependencies: []),
+        .target(
+            name: "WebView",
+            dependencies: []),
+        .target(
+            name: "TextArea",
+            dependencies: []),
         .testTarget(
-            name: "SwiftProTests",
+            name: "StringTests",
             dependencies: ["SwiftPro"]),
     ]
 )
