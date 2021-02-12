@@ -9,7 +9,7 @@ let package = Package(
         // Products define the executables and libraries a package produces, and make them visible to other packages.
         .library(
             name: "SwiftPro",
-            targets: ["BlurView", "LinkView", "WebView", "TextArea"]),
+            targets: ["BlurView", "LinkView", "WebView", "TextArea", "StringExtension"]),
     ],
     dependencies: [
         // Dependencies declare other packages that this package depends on.
@@ -29,9 +29,13 @@ let package = Package(
             dependencies: []),
         .target(
             name: "TextArea",
-            dependencies: []),
-        .testTarget(
-            name: "StringTests",
-            dependencies: ["SwiftPro"]),
+            dependencies: ["StringExtension"]),
+        .target(
+            name: "StringExtension",
+            dependencies: [],
+            path: "Sources/Extensions"),
+//        .testTarget(
+//            name: "SwiftProTests",
+//            dependencies: ["SwiftPro"]),
     ]
 )

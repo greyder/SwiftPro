@@ -1,4 +1,5 @@
 import SwiftUI
+import StringExtension
 
 @available(iOS 14, *)
 public struct TextArea: View {
