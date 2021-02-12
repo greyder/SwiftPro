@@ -46,8 +46,8 @@ let package = Package(
             name: "StringExtension",
             dependencies: [],
             path: "Sources/Extensions"),
-//        .testTarget(
-//            name: "SwiftProTests",
-//            dependencies: ["SwiftPro"]),
+        .testTarget(
+            name: "StringTests",
+            dependencies: ["StringExtension"]),
     ]
 )

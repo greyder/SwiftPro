@@ -1,5 +1,7 @@
 import XCTest
-@testable import SwiftPro
+//@testable import StringExtension
+//@testable provides access only for internal functions; fileprivate and private declarations are not visible outside of their usual scope when using testable.
+import StringExtension
 
 final class StringTests: XCTestCase {
     
