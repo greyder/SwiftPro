@@ -9,7 +9,7 @@ let package = Package(
         // Products define the executables and libraries a package produces, and make them visible to other packages.
         .library(
             name: "SwiftPro",
-            targets: ["SwiftPro"]),
+            targets: ["BlurView", "LinkView", "WebView", "TextArea"]),
     ],
     dependencies: [
         // Dependencies declare other packages that this package depends on.
@@ -19,24 +19,17 @@ let package = Package(
         // Targets are the basic building blocks of a package. A target can define a module or a test suite.
         // Targets can depend on other targets in this package, and on products in packages this package depends on.
         .target(
-            name: "SwiftPro",
-            dependencies: ["TextArea", "BlurView", "LinkView", "WebView"]),
-        .target(
             name: "BlurView",
-            dependencies: [],
-            path: "Sources/SwiftPro/UIKit"),
+            dependencies: []),
         .target(
             name: "LinkView",
-            dependencies: [],
-            path: "Sources/SwiftPro/UIKit"),
+            dependencies: []),
         .target(
             name: "WebView",
-            dependencies: [],
-            path: "Sources/SwiftPro/UIKit"),
+            dependencies: []),
         .target(
             name: "TextArea",
-            dependencies: [],
-            path: "Sources/SwiftPro/Views"),
+            dependencies: []),
         .testTarget(
             name: "StringTests",
             dependencies: ["SwiftPro"]),
